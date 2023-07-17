@@ -1,0 +1,1519 @@
+<div class="sd__step-questionwrapper">
+    <div class="sd__step-questionbox _active" data-step="1">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>Подскажите, какая у Вас общая сумма всех кредитов и долгов?</h3>
+                <div class="sd__step-chance">
+                    <div class="sd__step-percent">+5%</div>
+                    <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                </div>
+            </div>
+        </div>
+        <input class="sd__step-summ" type="text" value="300 000 ₽" placeholder="300 000 ₽" onfocus="debtSummRemoveSymbol(this)" onblur="debtSummAddSymbol(this)" oninput="debtSummSet(this)">
+        <div class="sd__step-range">
+            <input type="range" min="10" max="900" step="1" value="300" data-sum="300000" oninput="debtRangeSet()">
+            <div class="sd__step-hatch">
+                <span class="_green"></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="sd__step-value">
+                <span>10 000 ₽</span>
+                <span>300 000 ₽</span>
+                <span>1 000 000 ₽</span>
+                <span>5 000 000 ₽</span>
+            </div>
+        </div>
+    </div>
+    <div class="sd__step-questionbox" data-step="2">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>Выберите, пожалуйста, какие это кредиты:</h3>
+                <div class="sd__step-chance">
+                    <div class="sd__step-percent">+5%</div>
+                    <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                </div>
+            </div>
+            <p class="sd__step-subtitle">Выберите один или несколько  вариантов ответа.</p>
+        </div>
+        <ul class="sd__step-checkboxes">
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="checkbox" name="" onchange="removeDisabled(this)" value="Потребительские кредиты">
+                    <span>Потребительские кредиты</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="checkbox" name="" onchange="removeDisabled(this)" value="Кредитные карты">
+                    <span>Кредитные карты</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="checkbox" name="" onchange="removeDisabled(this)" value="Микрозаймы">
+                    <span>Микрозаймы</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="checkbox" name="" onchange="removeDisabled(this)" value="ЖКХ">
+                    <span>ЖКХ</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="checkbox" name="" onchange="removeDisabled(this)" value="Алименты">
+                    <span>Алименты</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="checkbox" name="" onchange="removeDisabled(this)" value="Штрафы">
+                    <span>Штрафы</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="checkbox" name="" onchange="removeDisabled(this)" value="Ипотека">
+                    <span>Ипотека</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="checkbox" name="" onchange="removeDisabled(this)" value="Другой вариант">
+                    <span>Другой вариант</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="sd__step-questionbox" data-step="3">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>Какой у Вас ежемесячный платеж по ВСЕМ кредитам?</h3>
+                <div class="sd__step-chance">
+                    <div class="sd__step-percent">+5%</div>
+                    <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                </div>
+            </div>
+        </div>
+        <ul class="sd__step-radioboxes">
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="debt-payment" onchange="removeDisabled(this)">
+                    <span>До 10 000 ₽</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="debt-payment" onchange="removeDisabled(this)" value="От 10 000 ₽ до 20 000 ₽">
+                    <span>От 10 000 ₽ до 20 000 ₽</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="debt-payment" onchange="removeDisabled(this)" value="От 20 000 ₽ до 50 000 ₽">
+                    <span>От 20 000 ₽ до 50 000 ₽</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="debt-payment" onchange="removeDisabled(this)" value="Более 50 000 ₽">
+                    <span>Более 50 000 ₽</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="sd__step-questionbox" data-step="4">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>У Вас есть просрочки хотя бы по 1 из кредитов?</h3>
+                <div class="sd__step-chance">
+                    <div class="sd__step-percent">+5%</div>
+                    <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                </div>
+            </div>
+        </div>
+        <ul class="sd__step-radioboxes">
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="debt-delay" onchange="removeDisabled(this)" value="Нет">
+                    <span>Нет</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="debt-delay" onchange="removeDisabled(this)" value="До 3х месяцев">
+                    <span>До 3х месяцев</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="debt-delay" onchange="removeDisabled(this)" value="Более 3 месяцев">
+                    <span>Более 3 месяцев</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="sd__step-questionbox" data-step="5">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>Укажите, какой у Вас официальный доход?</h3>
+                <div class="sd__step-chance">
+                    <div class="sd__step-percent">+7%</div>
+                    <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                </div>
+            </div>
+        </div>
+        <ul class="sd__step-radioboxes">
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="income" onchange="removeDisabled(this)" value="Менее 10 000 ₽">
+                    <span>Менее 10 000 ₽</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="income" onchange="removeDisabled(this)" value="От 10 000 ₽ до 20 000 ₽">
+                    <span>От 10 000 ₽ до 20 000 ₽</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="income" onchange="removeDisabled(this)" value="От  20 000 ₽ до 50 000 ₽">
+                    <span>От  20 000 ₽ до 50 000 ₽</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="income" onchange="removeDisabled(this)" value="Более 50 000 ₽">
+                    <span>Более 50 000 ₽</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="sd__step-questionbox" data-step="6">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>Какой вариант, по Вашему мнению, Вам точно поможет?</h3>
+                <div class="sd__step-chance">
+                    <div class="sd__step-percent">+7%</div>
+                    <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                </div>
+            </div>
+        </div>
+        <ul class="sd__step-radioboxes">
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="variant" onchange="removeDisabled(this)" value="Если я спишу кредиты и долги полностью">
+                    <span>Если я спишу кредиты и долги полностью</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="variant" onchange="removeDisabled(this)" value="Если я уменьшу платежи по кредитам хотя бы до 12 500 ₽/мес">
+                    <span>Если я уменьшу платежи по кредитам хотя бы до 12 500 ₽/мес</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="variant" onchange="removeDisabled(this)" value="Если я пройду процедуру банкротства">
+                    <span>Если я пройду процедуру банкротства</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="sd__step-questionbox" data-step="7">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>Вы знакомы с 127-ФЗ, ст.333 ГК РФ, 229-ФЗ?</h3>
+                <div class="sd__step-chance">
+                    <div class="sd__step-percent">+7%</div>
+                    <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                </div>
+            </div>
+        </div>
+        <ul class="sd__step-radioboxes">
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="act" onchange="removeDisabled(this)" value="Да, я бы хотел списать  кредиты по закону">
+                    <span>Да, я бы хотел списать  кредиты по закону</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="act" onchange="removeDisabled(this)" value="Что - то слышал, но не знаю деталей">
+                    <span>Что - то слышал, но не знаю деталей</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="act" onchange="removeDisabled(this)" value="Нет, а что это за законы?">
+                    <span>Нет, а что это за законы?</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="sd__step-questionbox" data-step="8">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>Если мы законно освободим Вас от  обязанности платить кредиты уже сегодня, Вас это устроит?</h3>
+                <div class="sd__step-chance">
+                    <div class="sd__step-percent">+7%</div>
+                    <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                </div>
+            </div>
+        </div>
+        <ul class="sd__step-radioboxes">
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="relief" onchange="removeDisabled(this)" value="Ну конечно устроит">
+                    <span>Ну конечно устроит</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="relief" onchange="removeDisabled(this)" value="Не знаю, я хотел(а) бы оплатить кредиты">
+                    <span>Не знаю, я хотел(а) бы оплатить кредиты</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="sd__step-questionbox" data-step="9">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>Напишите и выберите из какого Вы города:</h3>
+                <div class="sd__step-chance">
+                    <div class="sd__step-percent">+10%</div>
+                    <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                </div>
+            </div>
+        </div>
+        <div class="select">
+            <div class="select__inner">
+                <div class="select__header">
+                    <input type="text" placeholder="Начните вводить город" autocomplete="off" onfocus="focusIt(this)" oninput="searchIt(this)" id="city-select" onchange="removeDisabled(this)">
+                </div>
+                <div class="select__body">
+                    <div class="select__item" onclick="chooseIt(this)">Абаза</div>
+                    <div class="select__item" onclick="chooseIt(this)">Абакан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Абдулино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Абинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Автуры</div>
+                    <div class="select__item" onclick="chooseIt(this)">Агидель</div>
+                    <div class="select__item" onclick="chooseIt(this)">Агрыз</div>
+                    <div class="select__item" onclick="chooseIt(this)">Адыгейск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Азнакаево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Азов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ак-Довурак</div>
+                    <div class="select__item" onclick="chooseIt(this)">Аксай</div>
+                    <div class="select__item" onclick="chooseIt(this)">Аксубаево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Алагир</div>
+                    <div class="select__item" onclick="chooseIt(this)">Алапаевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Алатырь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Алдан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Алейск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Александров</div>
+                    <div class="select__item" onclick="chooseIt(this)">Александровск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Александровск-Сахалинский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Алексеевка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Алексин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Алзамай</div>
+                    <div class="select__item" onclick="chooseIt(this)">Алупка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Алушта</div>
+                    <div class="select__item" onclick="chooseIt(this)">Альметьевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Амурск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Анадырь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Анапа</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ангарск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Андреаполь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Анжеро-Судженск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Анива</div>
+                    <div class="select__item" onclick="chooseIt(this)">Апатиты</div>
+                    <div class="select__item" onclick="chooseIt(this)">Апрелевка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Апшеронск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Арамиль</div>
+                    <div class="select__item" onclick="chooseIt(this)">Аргун</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ардатов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ардон</div>
+                    <div class="select__item" onclick="chooseIt(this)">Арзамас</div>
+                    <div class="select__item" onclick="chooseIt(this)">Аркадак</div>
+                    <div class="select__item" onclick="chooseIt(this)">Армавир</div>
+                    <div class="select__item" onclick="chooseIt(this)">Армянск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Арсеньев</div>
+                    <div class="select__item" onclick="chooseIt(this)">Арск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Артем</div>
+                    <div class="select__item" onclick="chooseIt(this)">Артёмовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Артёмовский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Архангельск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Асбест</div>
+                    <div class="select__item" onclick="chooseIt(this)">Асино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Астрахань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Аткарск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Атяшево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ахтубинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ачинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Аша</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бабаево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бабушкин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бавлы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Багратионовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Байкальск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Баймак</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бакал</div>
+                    <div class="select__item" onclick="chooseIt(this)">Баксан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Балабаново</div>
+                    <div class="select__item" onclick="chooseIt(this)">Балаково</div>
+                    <div class="select__item" onclick="chooseIt(this)">Балахна</div>
+                    <div class="select__item" onclick="chooseIt(this)">Балашиха</div>
+                    <div class="select__item" onclick="chooseIt(this)">Балашов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Балей</div>
+                    <div class="select__item" onclick="chooseIt(this)">Балтийск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Барабинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Барнаул</div>
+                    <div class="select__item" onclick="chooseIt(this)">Барыш</div>
+                    <div class="select__item" onclick="chooseIt(this)">Батайск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бахчисарай</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бежецк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белая Калитва</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белая Холуница</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белгород</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белебей</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белёв</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белинский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белозерск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белокуриха</div>
+                    <div class="select__item" onclick="chooseIt(this)">Беломорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белорецк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белореченск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белоусово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белоярский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Белый</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бердск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Березники</div>
+                    <div class="select__item" onclick="chooseIt(this)">Берёзовский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Беслан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бея</div>
+                    <div class="select__item" onclick="chooseIt(this)">Биджан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бийск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бикин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Билибино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Биробиджан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бирск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бирюсинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бирюч</div>
+                    <div class="select__item" onclick="chooseIt(this)">Благовещенск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Благодарный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бобров</div>
+                    <div class="select__item" onclick="chooseIt(this)">Богданович</div>
+                    <div class="select__item" onclick="chooseIt(this)">Богородицк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Богородск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Боготол</div>
+                    <div class="select__item" onclick="chooseIt(this)">Богучар</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бодайбо</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бокситогорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Болгар</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бологое</div>
+                    <div class="select__item" onclick="chooseIt(this)">Болотное</div>
+                    <div class="select__item" onclick="chooseIt(this)">Болохово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Болхов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Большой Камень</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бор</div>
+                    <div class="select__item" onclick="chooseIt(this)">Борзя</div>
+                    <div class="select__item" onclick="chooseIt(this)">Борисоглебск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Боровичи</div>
+                    <div class="select__item" onclick="chooseIt(this)">Боровск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бородино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Братск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бронницы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Брянск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бугульма</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бугуруслан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Будённовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бузулук</div>
+                    <div class="select__item" onclick="chooseIt(this)">Буинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Буй</div>
+                    <div class="select__item" onclick="chooseIt(this)">Буйнакск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Бутурлиновка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Валдай</div>
+                    <div class="select__item" onclick="chooseIt(this)">Валуйки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Велиж</div>
+                    <div class="select__item" onclick="chooseIt(this)">Великие Луки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Великий Новгород</div>
+                    <div class="select__item" onclick="chooseIt(this)">Великий Устюг</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вельск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Венёв</div>
+                    <div class="select__item" onclick="chooseIt(this)">Верещагино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Верея</div>
+                    <div class="select__item" onclick="chooseIt(this)">Верхнеуральск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Верхний Тагил</div>
+                    <div class="select__item" onclick="chooseIt(this)">Верхний Уфалей</div>
+                    <div class="select__item" onclick="chooseIt(this)">Верхняя Пышма</div>
+                    <div class="select__item" onclick="chooseIt(this)">Верхняя Салда</div>
+                    <div class="select__item" onclick="chooseIt(this)">Верхняя Тура</div>
+                    <div class="select__item" onclick="chooseIt(this)">Верхотурье</div>
+                    <div class="select__item" onclick="chooseIt(this)">Верхоянск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Весьегонск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ветлуга</div>
+                    <div class="select__item" onclick="chooseIt(this)">Видное</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вилюйск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вилючинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вихоревка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вичуга</div>
+                    <div class="select__item" onclick="chooseIt(this)">Владивосток</div>
+                    <div class="select__item" onclick="chooseIt(this)">Владикавказ</div>
+                    <div class="select__item" onclick="chooseIt(this)">Владимир</div>
+                    <div class="select__item" onclick="chooseIt(this)">Волгоград</div>
+                    <div class="select__item" onclick="chooseIt(this)">Волгодонск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Волгореченск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Волжск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Волжский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вологда</div>
+                    <div class="select__item" onclick="chooseIt(this)">Володарск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Волоколамск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Волосово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Волхов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Волчанск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вольск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Воркута</div>
+                    <div class="select__item" onclick="chooseIt(this)">Воронеж</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ворсма</div>
+                    <div class="select__item" onclick="chooseIt(this)">Воскресенск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Воткинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Всеволожск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вуктыл</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вурнары</div>
+                    <div class="select__item" onclick="chooseIt(this)">Выборг</div>
+                    <div class="select__item" onclick="chooseIt(this)">Выкатной</div>
+                    <div class="select__item" onclick="chooseIt(this)">Выкса</div>
+                    <div class="select__item" onclick="chooseIt(this)">Высоковск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Высоцк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вытегра</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вышний Волочёк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вяземский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вязники</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вязьма</div>
+                    <div class="select__item" onclick="chooseIt(this)">Вятские Поляны</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гаврилов Посад</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гаврилов-Ям</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гагарин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гаджиево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гай</div>
+                    <div class="select__item" onclick="chooseIt(this)">Галич</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гатчина</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гвардейск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гдов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Геленджик</div>
+                    <div class="select__item" onclick="chooseIt(this)">Георгиевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Глазов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Голицыно</div>
+                    <div class="select__item" onclick="chooseIt(this)">Горбатов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Горно-Алтайск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Горнозаводск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Горняк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Городец</div>
+                    <div class="select__item" onclick="chooseIt(this)">Городище</div>
+                    <div class="select__item" onclick="chooseIt(this)">Городовиковск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гороховец</div>
+                    <div class="select__item" onclick="chooseIt(this)">Горячий Ключ</div>
+                    <div class="select__item" onclick="chooseIt(this)">Грайворон</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гремячинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Грозный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Грязи</div>
+                    <div class="select__item" onclick="chooseIt(this)">Грязовец</div>
+                    <div class="select__item" onclick="chooseIt(this)">Губаха</div>
+                    <div class="select__item" onclick="chooseIt(this)">Губкин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Губкинский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гудермес</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гуково</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гулькевичи</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гурьевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гусев</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гусиноозёрск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Гусь-Хрустальный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Давлеканово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дагестанские Огни</div>
+                    <div class="select__item" onclick="chooseIt(this)">Далматово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дальнегорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дальнереченск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Данилов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Данков</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дегтярск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дедовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Демидов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дербент</div>
+                    <div class="select__item" onclick="chooseIt(this)">Десногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Джанкой</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дзержинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дзержинский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дивногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дигора</div>
+                    <div class="select__item" onclick="chooseIt(this)">Димитровград</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дмитриев</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дмитров</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дмитровск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дно</div>
+                    <div class="select__item" onclick="chooseIt(this)">Добрянка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Долгопрудный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Долинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Домодедово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Донецк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Донской</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дорогобуж</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дрезна</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дубна</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дубовка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дудинка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Духовщина</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дюртюли</div>
+                    <div class="select__item" onclick="chooseIt(this)">Дятьково</div>
+                    <div class="select__item" onclick="chooseIt(this)">Евпатория</div>
+                    <div class="select__item" onclick="chooseIt(this)">Егорьевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ейск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Екатеринбург</div>
+                    <div class="select__item" onclick="chooseIt(this)">Елабуга</div>
+                    <div class="select__item" onclick="chooseIt(this)">Елец</div>
+                    <div class="select__item" onclick="chooseIt(this)">Елизово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ельня</div>
+                    <div class="select__item" onclick="chooseIt(this)">Еманжелинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Емва</div>
+                    <div class="select__item" onclick="chooseIt(this)">Енисейск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ермолино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ершов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ессентуки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ефремов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Железноводск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Железногорск (Курская обл)</div>
+                    <div class="select__item" onclick="chooseIt(this)">Железногорск-Илимский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Жердевка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Жигулёвск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Жиздра</div>
+                    <div class="select__item" onclick="chooseIt(this)">Жирновск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Жуков</div>
+                    <div class="select__item" onclick="chooseIt(this)">Жуковка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Жуковский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Завитинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Заводоуковск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Заволжск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Заволжье</div>
+                    <div class="select__item" onclick="chooseIt(this)">Задонск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Заинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Закаменск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Заозёрный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Заозёрск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Западная Двина</div>
+                    <div class="select__item" onclick="chooseIt(this)">Заполярный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зарайск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Заречный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Заринск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Звенигово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Звенигород</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зверево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зеленогорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зеленоград</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зеленоградск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зеленодольск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зеленокумск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зеленчукская</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зерноград</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зея</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зима</div>
+                    <div class="select__item" onclick="chooseIt(this)">Златоуст</div>
+                    <div class="select__item" onclick="chooseIt(this)">Злынка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Змеиногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Знаменск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зубцов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Зуевка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ивангород</div>
+                    <div class="select__item" onclick="chooseIt(this)">Иваново</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ивантеевка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ивдель</div>
+                    <div class="select__item" onclick="chooseIt(this)">Игарка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Игра</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ижевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ижморский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Избербаш</div>
+                    <div class="select__item" onclick="chooseIt(this)">Изобильный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Иланский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Инза</div>
+                    <div class="select__item" onclick="chooseIt(this)">Иннополис</div>
+                    <div class="select__item" onclick="chooseIt(this)">Инсар</div>
+                    <div class="select__item" onclick="chooseIt(this)">Инта</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ипатово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ирбит</div>
+                    <div class="select__item" onclick="chooseIt(this)">Иркутск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Исилькуль</div>
+                    <div class="select__item" onclick="chooseIt(this)">Искитим</div>
+                    <div class="select__item" onclick="chooseIt(this)">Истра</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ишим</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ишимбай</div>
+                    <div class="select__item" onclick="chooseIt(this)">Йошкар-Ола</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кадников</div>
+                    <div class="select__item" onclick="chooseIt(this)">Казань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Калач</div>
+                    <div class="select__item" onclick="chooseIt(this)">Калач-на-Дону</div>
+                    <div class="select__item" onclick="chooseIt(this)">Калачинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Калининград</div>
+                    <div class="select__item" onclick="chooseIt(this)">Калининск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Калтан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Калуга</div>
+                    <div class="select__item" onclick="chooseIt(this)">Калязин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Камбарка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Каменка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Каменногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Каменск-Уральский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Каменск-Шахтинский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Камень-на-Оби</div>
+                    <div class="select__item" onclick="chooseIt(this)">Камешково</div>
+                    <div class="select__item" onclick="chooseIt(this)">Камызяк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Камышин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Камышлов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Канаш</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кандалакша</div>
+                    <div class="select__item" onclick="chooseIt(this)">Канск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Карабаново</div>
+                    <div class="select__item" onclick="chooseIt(this)">Карабаш</div>
+                    <div class="select__item" onclick="chooseIt(this)">Карабулак</div>
+                    <div class="select__item" onclick="chooseIt(this)">Караваево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Карасук</div>
+                    <div class="select__item" onclick="chooseIt(this)">Карачаевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Карачев</div>
+                    <div class="select__item" onclick="chooseIt(this)">Каргат</div>
+                    <div class="select__item" onclick="chooseIt(this)">Каргополь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Карпинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Карталы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Касимов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Касли</div>
+                    <div class="select__item" onclick="chooseIt(this)">Каспийск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Катав-Ивановск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Катайск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Качканар</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кашин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кашира</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кедровый</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кемерово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кемь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Керчь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кизел</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кизилюрт</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кизляр</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кизнер</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кимовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кимры</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кингисепп</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кинель</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кинешма</div>
+                    <div class="select__item" onclick="chooseIt(this)">Киргиз-Мияки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Киреевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Киренск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Киржач</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кириллов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кириши</div>
+                    <div class="select__item" onclick="chooseIt(this)">Киров</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кировград</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кирово-Чепецк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кировск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кирс</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кирсанов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Киселёвск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кисловодск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Клин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Клинцы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Княгинино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ковдор</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ковров</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ковылкино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Когалым</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кодинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Козельск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Козловка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Козьмодемьянск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кокошкино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кола</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кологрив</div>
+                    <div class="select__item" onclick="chooseIt(this)">Коломна</div>
+                    <div class="select__item" onclick="chooseIt(this)">Колпашево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кольчугино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Комарово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Коммунар</div>
+                    <div class="select__item" onclick="chooseIt(this)">Комсомольск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Комсомольск-на-Амуре</div>
+                    <div class="select__item" onclick="chooseIt(this)">Конаково</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кондопога</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кондрово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Константиновск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Копейск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кораблино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кореновск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Коркино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Королёв</div>
+                    <div class="select__item" onclick="chooseIt(this)">Коротчаево (пуровский)</div>
+                    <div class="select__item" onclick="chooseIt(this)">Короча</div>
+                    <div class="select__item" onclick="chooseIt(this)">Корсаков</div>
+                    <div class="select__item" onclick="chooseIt(this)">Коряжма</div>
+                    <div class="select__item" onclick="chooseIt(this)">Костерёво</div>
+                    <div class="select__item" onclick="chooseIt(this)">Костомукша</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кострома</div>
+                    <div class="select__item" onclick="chooseIt(this)">Котельники</div>
+                    <div class="select__item" onclick="chooseIt(this)">Котельниково</div>
+                    <div class="select__item" onclick="chooseIt(this)">Котельнич</div>
+                    <div class="select__item" onclick="chooseIt(this)">Котлас</div>
+                    <div class="select__item" onclick="chooseIt(this)">Котово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Котовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кохма</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красавино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красноармейск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красновишерск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красногорское</div>
+                    <div class="select__item" onclick="chooseIt(this)">Краснодар</div>
+                    <div class="select__item" onclick="chooseIt(this)">Краснозаводск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Краснознаменск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Краснокаменск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Краснокамск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красноперекопск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Краснослободск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Краснотурьинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красноуральск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красноуфимск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красноярск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красный Кут</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красный Сулин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Красный Холм</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кремёнки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кропоткин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Крымск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кстово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кубинка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кувандык</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кувшиново</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кудрово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кудымкар</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кузнецк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Куйбышев</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кукмор</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кулебаки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кумертау</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кунгур</div>
+                    <div class="select__item" onclick="chooseIt(this)">Купино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Курган</div>
+                    <div class="select__item" onclick="chooseIt(this)">Курганинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Курильск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Курлово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Куровское</div>
+                    <div class="select__item" onclick="chooseIt(this)">Курск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Куртамыш</div>
+                    <div class="select__item" onclick="chooseIt(this)">Курчалой</div>
+                    <div class="select__item" onclick="chooseIt(this)">Курчатов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Куса</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кушва</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кызыл</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кысыл-Сыр</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кыштым</div>
+                    <div class="select__item" onclick="chooseIt(this)">Кяхта</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лабинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лабытнанги</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лагань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ладушкин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лаишево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лакинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лангепас</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лахденпохья</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лебедянь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лениногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ленинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ленинск-Кузнецкий</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ленск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лермонтов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лесной</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лесозаводск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лесосибирск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ливны</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ликино-Дулёво</div>
+                    <div class="select__item" onclick="chooseIt(this)">Липецк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Липки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лиски</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лихославль</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лобня</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лодейное Поле</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лосино-Петровский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Луга</div>
+                    <div class="select__item" onclick="chooseIt(this)">Луза</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лукоянов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Луховицы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лысково</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лысьва</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лыткарино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Львовский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Льгов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Любань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Люберцы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Любим</div>
+                    <div class="select__item" onclick="chooseIt(this)">Людиново</div>
+                    <div class="select__item" onclick="chooseIt(this)">Лянтор</div>
+                    <div class="select__item" onclick="chooseIt(this)">Магадан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Магас</div>
+                    <div class="select__item" onclick="chooseIt(this)">Магнитогорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Майкоп</div>
+                    <div class="select__item" onclick="chooseIt(this)">Майский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Макаров</div>
+                    <div class="select__item" onclick="chooseIt(this)">Макарьев</div>
+                    <div class="select__item" onclick="chooseIt(this)">Макушино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Малая Вишера</div>
+                    <div class="select__item" onclick="chooseIt(this)">Малая Пурга</div>
+                    <div class="select__item" onclick="chooseIt(this)">Малгобек</div>
+                    <div class="select__item" onclick="chooseIt(this)">Малмыж</div>
+                    <div class="select__item" onclick="chooseIt(this)">Малоархангельск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Малоярославец</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мамадыш</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мамоново</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мантурово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мари-Турек</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мариинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мариинский Посад</div>
+                    <div class="select__item" onclick="chooseIt(this)">Маркс</div>
+                    <div class="select__item" onclick="chooseIt(this)">Махачкала</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мглин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мегион</div>
+                    <div class="select__item" onclick="chooseIt(this)">Медвежьегорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Медногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Медынь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Межгорье</div>
+                    <div class="select__item" onclick="chooseIt(this)">Междуреченск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мезень</div>
+                    <div class="select__item" onclick="chooseIt(this)">Меленки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мелеуз</div>
+                    <div class="select__item" onclick="chooseIt(this)">Менделеевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мензелинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мещовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Миасс</div>
+                    <div class="select__item" onclick="chooseIt(this)">Микунь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Миллерово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Минеральные Воды</div>
+                    <div class="select__item" onclick="chooseIt(this)">Минусинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Миньяр</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мирный (Архангельская область)</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мирный (Якутия)</div>
+                    <div class="select__item" onclick="chooseIt(this)">Михайлов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Михайловка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Михайловск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мичуринск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Могоча</div>
+                    <div class="select__item" onclick="chooseIt(this)">Можайск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Можга</div>
+                    <div class="select__item" onclick="chooseIt(this)">Моздок</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мончегорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Морки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Морозовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Моршанск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мосальск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Москва</div>
+                    <div class="select__item" onclick="chooseIt(this)">Муравленко</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мураши</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мурманск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Муром</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мценск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мыски</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мытищи</div>
+                    <div class="select__item" onclick="chooseIt(this)">Мышкин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Набережные Челны</div>
+                    <div class="select__item" onclick="chooseIt(this)">Навашино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Наволоки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Надым</div>
+                    <div class="select__item" onclick="chooseIt(this)">Назарово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Назрань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Называевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нальчик</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нариманов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Наро-Фоминск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нарткала</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нарьян-Мар</div>
+                    <div class="select__item" onclick="chooseIt(this)">Находка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Невель</div>
+                    <div class="select__item" onclick="chooseIt(this)">Невельск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Невинномысск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Невьянск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нелидово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Неман</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нерехта</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нерчинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нерюнгри</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нестеров</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нефтегорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нефтекамск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нефтекумск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нефтеюганск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нея</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижневартовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижнее Казанище</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижнекамск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижнеудинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижние Серги</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижний Ломов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижний Новгород</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижний Одес</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижний Тагил</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижняя Салда</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нижняя Тура</div>
+                    <div class="select__item" onclick="chooseIt(this)">Николаевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Николаевск-на-Амуре</div>
+                    <div class="select__item" onclick="chooseIt(this)">Никольск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Никольское</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новая Ладога</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новая Ляля</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новоалександровск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новоалтайск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новоаннинский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нововоронеж</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новодвинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новозыбков</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новокубанск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новокузнецк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новокуйбышевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новомихайловка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новомичуринск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новомосковск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новопавловск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новоржев</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новороссийск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новосибирск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новосиль</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новосокольники</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новотроицк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новоузенск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новоульяновск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новоуральск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новохопёрск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новочебоксарск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новочеркасск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новошахтинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новый Оскол</div>
+                    <div class="select__item" onclick="chooseIt(this)">Новый Уренгой</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ногинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нолинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Норильск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ноябрьск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нур-Тухум</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нурлат</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нытва</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нюрба</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нягань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Нязепетровск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Няндома</div>
+                    <div class="select__item" onclick="chooseIt(this)">Облучье</div>
+                    <div class="select__item" onclick="chooseIt(this)">Обнинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Обоянь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Обь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Одинцово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Озёрск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Озёры</div>
+                    <div class="select__item" onclick="chooseIt(this)">Октябрьск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Октябрьский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Окуловка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Олёкминск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Оленегорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Олонец</div>
+                    <div class="select__item" onclick="chooseIt(this)">Омск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Омсукчан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Омутнинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Онега</div>
+                    <div class="select__item" onclick="chooseIt(this)">Опочка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Орёл</div>
+                    <div class="select__item" onclick="chooseIt(this)">Оренбург</div>
+                    <div class="select__item" onclick="chooseIt(this)">Орехово-Зуево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Орлов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Орск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Оса</div>
+                    <div class="select__item" onclick="chooseIt(this)">Осинники</div>
+                    <div class="select__item" onclick="chooseIt(this)">Осташков</div>
+                    <div class="select__item" onclick="chooseIt(this)">Остров</div>
+                    <div class="select__item" onclick="chooseIt(this)">Островной</div>
+                    <div class="select__item" onclick="chooseIt(this)">Острогожск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Отрадное</div>
+                    <div class="select__item" onclick="chooseIt(this)">Отрадный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Оха</div>
+                    <div class="select__item" onclick="chooseIt(this)">Оханск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Очёр</div>
+                    <div class="select__item" onclick="chooseIt(this)">Павлово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Павловск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Павловский Посад</div>
+                    <div class="select__item" onclick="chooseIt(this)">Палласовка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пангоды</div>
+                    <div class="select__item" onclick="chooseIt(this)">Партизанск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Певек</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пенза</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пеники</div>
+                    <div class="select__item" onclick="chooseIt(this)">Первомайск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Первоуральск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Перевоз</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пересвет</div>
+                    <div class="select__item" onclick="chooseIt(this)">Переславль-Залесский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пермь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пестово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Петров Вал</div>
+                    <div class="select__item" onclick="chooseIt(this)">Петровск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Петровск-Забайкальский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Петрозаводск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Петропавловск-Камчатский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Петухово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Петушки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Печора</div>
+                    <div class="select__item" onclick="chooseIt(this)">Печоры</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пикалёво</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пиндуши</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пионерский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Питкяранта</div>
+                    <div class="select__item" onclick="chooseIt(this)">Плавск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пласт</div>
+                    <div class="select__item" onclick="chooseIt(this)">Плёс</div>
+                    <div class="select__item" onclick="chooseIt(this)">Поворино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Подольск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Подпорожье</div>
+                    <div class="select__item" onclick="chooseIt(this)">Покачи</div>
+                    <div class="select__item" onclick="chooseIt(this)">Покров</div>
+                    <div class="select__item" onclick="chooseIt(this)">Покровск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Полевской</div>
+                    <div class="select__item" onclick="chooseIt(this)">Полесск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Полысаево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Полярные Зори</div>
+                    <div class="select__item" onclick="chooseIt(this)">Полярный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Поронайск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Порхов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Похвистнево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Почеп</div>
+                    <div class="select__item" onclick="chooseIt(this)">Починок</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пошехонье</div>
+                    <div class="select__item" onclick="chooseIt(this)">Правдинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Приволжск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Приморск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Приморско-Ахтарск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Приозерск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Прокопьевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пролетарск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Протвино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Прохладный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Псков</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пугачёв</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пудож</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пустошка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пучеж</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пушкино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пущино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пыталово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пыть-Ях</div>
+                    <div class="select__item" onclick="chooseIt(this)">Пятигорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Радужный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Раздольный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Райчихинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Раменское</div>
+                    <div class="select__item" onclick="chooseIt(this)">Рассказово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ревда</div>
+                    <div class="select__item" onclick="chooseIt(this)">Реж</div>
+                    <div class="select__item" onclick="chooseIt(this)">Реутов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ржев</div>
+                    <div class="select__item" onclick="chooseIt(this)">Родники</div>
+                    <div class="select__item" onclick="chooseIt(this)">Рославль</div>
+                    <div class="select__item" onclick="chooseIt(this)">Россошь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ростов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ростов-на-Дону</div>
+                    <div class="select__item" onclick="chooseIt(this)">Рошаль</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ртищево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Рубцовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Рудня</div>
+                    <div class="select__item" onclick="chooseIt(this)">Руза</div>
+                    <div class="select__item" onclick="chooseIt(this)">Рузаевка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Рыбинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Рыбное</div>
+                    <div class="select__item" onclick="chooseIt(this)">Рыльск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ряжск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Рязань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Саки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Салават</div>
+                    <div class="select__item" onclick="chooseIt(this)">Салаир</div>
+                    <div class="select__item" onclick="chooseIt(this)">Салехард</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сальск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Самара</div>
+                    <div class="select__item" onclick="chooseIt(this)">Санкт-Петербург</div>
+                    <div class="select__item" onclick="chooseIt(this)">Саранск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сарапул</div>
+                    <div class="select__item" onclick="chooseIt(this)">Саратов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Саров</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сасово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сатка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сафоново</div>
+                    <div class="select__item" onclick="chooseIt(this)">Саяногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Саянск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Светлогорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Светлоград</div>
+                    <div class="select__item" onclick="chooseIt(this)">Светлый</div>
+                    <div class="select__item" onclick="chooseIt(this)">Светогорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Свирск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Свободный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Себеж</div>
+                    <div class="select__item" onclick="chooseIt(this)">Севастополь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Северо-Курильск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Северобайкальск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Северодвинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Североморск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Североуральск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Северск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Севск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сегежа</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сельцо</div>
+                    <div class="select__item" onclick="chooseIt(this)">Семёнов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Семикаракорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Семилуки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сенгилей</div>
+                    <div class="select__item" onclick="chooseIt(this)">Серафимович</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сергач</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сергиев Посад</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сердобск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Серов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Серпухов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сертолово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сибай</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сим</div>
+                    <div class="select__item" onclick="chooseIt(this)">Симферополь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сковородино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Скопин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Славгород</div>
+                    <div class="select__item" onclick="chooseIt(this)">Славск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Славянск-на-Кубани</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сланцы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Слободской</div>
+                    <div class="select__item" onclick="chooseIt(this)">Слюдянка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Смирных</div>
+                    <div class="select__item" onclick="chooseIt(this)">Смоленск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Снежинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Снежногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Собинка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Советск (Тульская обл)</div>
+                    <div class="select__item" onclick="chooseIt(this)">Советская Гавань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Советский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сокол</div>
+                    <div class="select__item" onclick="chooseIt(this)">Солигалич</div>
+                    <div class="select__item" onclick="chooseIt(this)">Соликамск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Солнечногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Соль-Илецк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сольвычегодск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сольцы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сорочинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сортавала</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сосенский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сосновка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сосновоборск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сосновый Бор</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сосногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сочи</div>
+                    <div class="select__item" onclick="chooseIt(this)">Спас-Деменск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Спас-Клепики</div>
+                    <div class="select__item" onclick="chooseIt(this)">Спасск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Спасск-Дальний</div>
+                    <div class="select__item" onclick="chooseIt(this)">Спасск-Рязанский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Среднеколымск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Среднеуральск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сретенск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ставрополь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Старая Купавна</div>
+                    <div class="select__item" onclick="chooseIt(this)">Старая Русса</div>
+                    <div class="select__item" onclick="chooseIt(this)">Старица</div>
+                    <div class="select__item" onclick="chooseIt(this)">Стародуб</div>
+                    <div class="select__item" onclick="chooseIt(this)">Старый Крым</div>
+                    <div class="select__item" onclick="chooseIt(this)">Старый Оскол</div>
+                    <div class="select__item" onclick="chooseIt(this)">Стерлитамак</div>
+                    <div class="select__item" onclick="chooseIt(this)">Стрежевой</div>
+                    <div class="select__item" onclick="chooseIt(this)">Строитель</div>
+                    <div class="select__item" onclick="chooseIt(this)">Струнино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ступино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Суворов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Судак</div>
+                    <div class="select__item" onclick="chooseIt(this)">Суджа</div>
+                    <div class="select__item" onclick="chooseIt(this)">Судогда</div>
+                    <div class="select__item" onclick="chooseIt(this)">Суздаль</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сунжа</div>
+                    <div class="select__item" onclick="chooseIt(this)">Суоярви</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сураж</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сургут</div>
+                    <div class="select__item" onclick="chooseIt(this)">Суровикино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сурск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сусуман</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сухиничи</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сухой Лог</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сызрань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сыктывкар</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сысерть</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сычёвка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Сясьстрой</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тавда</div>
+                    <div class="select__item" onclick="chooseIt(this)">Таганрог</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тайга</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тайшет</div>
+                    <div class="select__item" onclick="chooseIt(this)">Талдом</div>
+                    <div class="select__item" onclick="chooseIt(this)">Талица</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тамбов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тара</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тарко-Сале</div>
+                    <div class="select__item" onclick="chooseIt(this)">Таруса</div>
+                    <div class="select__item" onclick="chooseIt(this)">Татарск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тахтамукай</div>
+                    <div class="select__item" onclick="chooseIt(this)">Таштагол</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тверь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Теберда</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тейково</div>
+                    <div class="select__item" onclick="chooseIt(this)">Темников</div>
+                    <div class="select__item" onclick="chooseIt(this)">Темрюк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Терек</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тетюши</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тимашёвск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тихвин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тихорецк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тобольск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тогучин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тольятти</div>
+                    <div class="select__item" onclick="chooseIt(this)">Томари</div>
+                    <div class="select__item" onclick="chooseIt(this)">Томмот</div>
+                    <div class="select__item" onclick="chooseIt(this)">Томск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Топки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Торжок</div>
+                    <div class="select__item" onclick="chooseIt(this)">Торопец</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тосно</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тотьма</div>
+                    <div class="select__item" onclick="chooseIt(this)">Трёхгорный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Троицк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Трубчевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Туапсе</div>
+                    <div class="select__item" onclick="chooseIt(this)">Туймазы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тула</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тулун</div>
+                    <div class="select__item" onclick="chooseIt(this)">Туран</div>
+                    <div class="select__item" onclick="chooseIt(this)">Туринск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Турочак</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тутаев</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тында</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тырныауз</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тюкалинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Тюмень</div>
+                    <div class="select__item" onclick="chooseIt(this)">Уварово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Углегорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Углич</div>
+                    <div class="select__item" onclick="chooseIt(this)">Удачный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Удомля</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ужур</div>
+                    <div class="select__item" onclick="chooseIt(this)">Узловая</div>
+                    <div class="select__item" onclick="chooseIt(this)">Улан-Удэ</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ульяновск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Унеча</div>
+                    <div class="select__item" onclick="chooseIt(this)">Урай</div>
+                    <div class="select__item" onclick="chooseIt(this)">Урень</div>
+                    <div class="select__item" onclick="chooseIt(this)">Уржум</div>
+                    <div class="select__item" onclick="chooseIt(this)">Урус-Мартан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Урюпинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усмань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усолье</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усолье-Сибирское</div>
+                    <div class="select__item" onclick="chooseIt(this)">Уссурийск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усть-Баргузин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усть-Джегута</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усть-Илимск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усть-Катав</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усть-Кут</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усть-Лабинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Усть-Элегест</div>
+                    <div class="select__item" onclick="chooseIt(this)">Устюжна</div>
+                    <div class="select__item" onclick="chooseIt(this)">Уфа</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ухта</div>
+                    <div class="select__item" onclick="chooseIt(this)">Учалы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Уяр</div>
+                    <div class="select__item" onclick="chooseIt(this)">Фатеж</div>
+                    <div class="select__item" onclick="chooseIt(this)">Федоровский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Феодосия</div>
+                    <div class="select__item" onclick="chooseIt(this)">Фокино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Фролово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Фрязино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Фурманов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Хабаровск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Хадыженск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ханты-Мансийск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Харабали</div>
+                    <div class="select__item" onclick="chooseIt(this)">Харовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Хасавюрт</div>
+                    <div class="select__item" onclick="chooseIt(this)">Хвалынск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Хилок</div>
+                    <div class="select__item" onclick="chooseIt(this)">Химки</div>
+                    <div class="select__item" onclick="chooseIt(this)">Холм</div>
+                    <div class="select__item" onclick="chooseIt(this)">Холмск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Хотьково</div>
+                    <div class="select__item" onclick="chooseIt(this)">Цивильск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Цимлянск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чадан</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чайковский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чапаевск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чаплыгин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чебаркуль</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чебоксары</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чегем</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чекалин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Челябинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чердынь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Черемхово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Черепаново</div>
+                    <div class="select__item" onclick="chooseIt(this)">Череповец</div>
+                    <div class="select__item" onclick="chooseIt(this)">Черкесск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чёрмоз</div>
+                    <div class="select__item" onclick="chooseIt(this)">Черноголовка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Черногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чернушка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Черняховск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чехов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чистополь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чита</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чкаловск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чудово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чулым</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чусовой</div>
+                    <div class="select__item" onclick="chooseIt(this)">Чухлома</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шагонар</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шадринск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шали</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шарыпово</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шарья</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шатура</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шахты</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шахунья</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шацк</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шебекино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шелехов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шенкурск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шилка</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шимановск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шиханы</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шлиссельбург</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шумерля</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шумиха</div>
+                    <div class="select__item" onclick="chooseIt(this)">Шуя</div>
+                    <div class="select__item" onclick="chooseIt(this)">Щекино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Щёлкино</div>
+                    <div class="select__item" onclick="chooseIt(this)">Щёлково</div>
+                    <div class="select__item" onclick="chooseIt(this)">Щигры</div>
+                    <div class="select__item" onclick="chooseIt(this)">Щучье</div>
+                    <div class="select__item" onclick="chooseIt(this)">Электрогорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Электросталь</div>
+                    <div class="select__item" onclick="chooseIt(this)">Электроугли</div>
+                    <div class="select__item" onclick="chooseIt(this)">Элиста</div>
+                    <div class="select__item" onclick="chooseIt(this)">Энгель-Юрт</div>
+                    <div class="select__item" onclick="chooseIt(this)">Энгельс</div>
+                    <div class="select__item" onclick="chooseIt(this)">Энем</div>
+                    <div class="select__item" onclick="chooseIt(this)">Эртиль</div>
+                    <div class="select__item" onclick="chooseIt(this)">Югорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Южа</div>
+                    <div class="select__item" onclick="chooseIt(this)">Южно-Сахалинск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Южно-Сухокумск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Южноуральск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Юрга</div>
+                    <div class="select__item" onclick="chooseIt(this)">Юрьев-Польский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Юрьевец</div>
+                    <div class="select__item" onclick="chooseIt(this)">Юрюзань</div>
+                    <div class="select__item" onclick="chooseIt(this)">Юхнов</div>
+                    <div class="select__item" onclick="chooseIt(this)">Яблоновский</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ядрин</div>
+                    <div class="select__item" onclick="chooseIt(this)">Якутск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ялта</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ялуторовск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Янаул</div>
+                    <div class="select__item" onclick="chooseIt(this)">Яранск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Яренск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Яровое</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ярославль</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ярцево</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ясногорск</div>
+                    <div class="select__item" onclick="chooseIt(this)">Ясный</div>
+                    <div class="select__item" onclick="chooseIt(this)">Яхрома</div>
+                    <div class="select__item" onclick="chooseIt(this)">Яшалта</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sd__step-questionbox" data-step="10">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>Ну и  последний вопрос, если через  6 - 12  месяцев Ваш долг будет 0,00₽, Вас это устроит?</h3>
+                <div class="sd__step-chance">
+                    <div class="sd__step-percent">+10%</div>
+                    <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                </div>
+            </div>
+        </div>
+        <ul class="sd__step-radioboxes">
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="debt-annulation" onchange="removeDisabled(this)" value="Да">
+                    <span>Да</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="debt-annulation" onchange="removeDisabled(this)" value="Нет">
+                    <span>Нет</span>
+                </label>
+            </li>
+            <li class="sd__step-checkbox">
+                <label>
+                    <input type="radio" name="debt-annulation" onchange="removeDisabled(this)" value="Затрудняюсь ответить">
+                    <span>Затрудняюсь ответить</span>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <div class="sd__step-questionbox" data-step="11">
+        <div class="sd__step-question">
+            <div class="sd__step-header">
+                <h3>Заполните данные, чтобы получить окончательный расчет по списанию кредитов и долгов</h3>
+            </div>
+        </div>
+        <div class="sd__step-inputs">
+            <div class="sd__step-inputbox _required">
+                <div class="sd__step-label">
+                    <p>Ваше ФИО <span>*</span></p>
+                    <span>Заполните данные</span>
+                </div>
+                <div class="sd__step-input">
+                    <input id="sd-name" type="text" placeholder="ФИО" data-percent="10" data-filled="false" autocomplete="off" oninput="inputPercentRecalc(this)" onfocus="removeError(this)" onblur="checkOnError(this)" enterkeyhint="send">
+                    <div class="sd__step-chance">
+                        <div class="sd__step-percent">+10%</div>
+                        <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sd__step-inputbox _required">
+                <div class="sd__step-label">
+                    <p>Телефон <span>*</span></p>
+                    <span>Заполните данные</span>
+                </div>
+                <div class="sd__step-input">
+                    <input id="sd-phone" type="text" inputmode="numeric" placeholder="+7" data-percent="10" data-filled="false" autocomplete="off" oninput="inputPercentRecalc(this)" onfocus="removeError(this)" onblur="checkOnError(this)" enterkeyhint="send">
+                    <div class="sd__step-chance">
+                        <div class="sd__step-percent">+10%</div>
+                        <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sd__step-inputbox">
+                <div class="sd__step-label">
+                    <p>E-mail</p>
+                </div>
+                <div class="sd__step-input">
+                    <input id="sd-mail" type="text" placeholder="E-mail" data-percent="2" data-filled="false" autocomplete="off" oninput="inputPercentRecalc(this)" onfocus="removeError(this)" onblur="checkOnError(this)" enterkeyhint="send">
+                    <div class="sd__step-chance">
+                        <div class="sd__step-percent">+2%</div>
+                        <div class="sd__step-hint">Увеличение вероятности списания кредитов</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
